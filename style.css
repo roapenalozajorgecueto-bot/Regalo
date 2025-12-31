@@ -1,0 +1,113 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(circle, #120014, #000);
+  height: 100vh;
+  overflow: hidden;
+  font-family: "Segoe UI", sans-serif;
+  color: white;
+}
+
+#startBtn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 16px 32px;
+  font-size: 20px;
+  border-radius: 30px;
+  border: none;
+  background: crimson;
+  color: white;
+  cursor: pointer;
+  z-index: 10;
+}
+
+#musicBtn {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px 16px;
+  border-radius: 50%;
+  border: none;
+  font-size: 20px;
+  background: rgba(255,255,255,0.2);
+  color: white;
+  display: none;
+  cursor: pointer;
+}
+
+canvas {
+  display: none;
+}
+
+#message {
+  position: absolute;
+  left: 5%;
+  bottom: 15%;
+  width: 35%;
+  max-width: 420px;
+  font-size: 18px;
+  line-height: 1.6;
+  opacity: 0;
+  transition: opacity 2s ease;
+}
+
+#message span {
+  color: crimson;
+  font-weight: bold;
+}
+
+#lyrics {
+  position: absolute;
+  bottom: 5%;
+  color: white;
+  text-align: center;
+  font-size: 18px;
+  opacity: 0;
+  transition: opacity 2s ease;
+  max-height: 40vh;
+  overflow-y: auto;
+}
+
+#lyrics p {
+  margin: 10px 0;
+}
+
+#lyrics {
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 35%;
+  max-width: 420px;
+  font-size: 20px;
+  line-height: 1.6;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+  white-space: pre-line;
+  color: #f2f2f2;
+}
+
+/* MÓVIL */
+@media (max-width: 768px) {
+  #message {
+    width: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 25%;
+    text-align: center;
+  }
+
+  #lyrics {
+    width: 90%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    top: 65%;
+    text-align: center;
+    font-size: 16px;
+  }
+}
